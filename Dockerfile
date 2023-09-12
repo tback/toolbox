@@ -4,6 +4,9 @@ RUN apk add --no-cache \
     bind-tools \
     httpie \
     inetutils-telnet \
-    iputils-ping
+    iputils-ping \
+    jq \
+    less \
+    yq 
 
 CMD ["/bin/ash"]
