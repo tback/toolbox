@@ -7,6 +7,9 @@ RUN apk add --no-cache \
     iputils-ping \
     jq \
     less \
+    mycli \
+    netcat-openbsd \
+    pgcli \
     yq 
 
 CMD ["/bin/ash"]
