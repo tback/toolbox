@@ -1,12 +1,7 @@
-FROM debian:bookworm-slim
+FROM alpine:latest
 
-RUN \
-  apt-get update && \
-  apt-get --yes --no-install-recommends install \
-    dnsutils \
-    iputils-ping \
-    && \
-  apt-get clean && \
-  rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache \
+    bind-tools \
+    iputils-ping
 
-CMD ["/bin/bash"]
+CMD ["/bin/ash"]
